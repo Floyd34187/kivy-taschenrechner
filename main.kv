@@ -1,0 +1,56 @@
+MyBoxLayout:
+	orientation: "vertical"
+
+	Label:
+		text: 'Zahl 1'
+		text_size: self.size
+		halign: 'right'
+		valign: 'bottom'
+		font_size: 20
+		
+	TextInput:
+		id: tfZ1
+		text: ''
+		halign: "right"
+		font_size: 80
+		multiline: False
+	Label:
+		text: 'Zahl 1'
+		text_size: self.size
+		halign: 'right'
+		valign: 'bottom'
+		font_size: 20
+	TextInput:
+		id: tfZ2
+		text: ''
+		halign: "right"
+		font_size: 80
+		multiline: False
+	Label:
+		text: 'Ergebnis'
+		text_size: self.size
+		halign: 'right'
+		valign: 'bottom'
+		font_size: 20
+	TextInput:
+		id: tfErg
+		text: '0'
+		halign: "right"
+		font_size: 80
+		readonly: True
+	
+	BoxLayout:
+		orientation: "horizontal"
+			
+		Button: 
+			text: "+"
+			on_press: root.rechne("+")
+		Button: 
+			text: "-"
+			on_press: root.rechne("-")
+		Button: 
+			text: "*"
+			on_press: root.rechne("*")
+		Button: 
+			text: "/"
+			on_press: root.rechne("/")
